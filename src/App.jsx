@@ -1,13 +1,16 @@
 import './App.css'
+import React from 'react';
 import { Link } from 'react-router-dom'
 
-function App() {
 
+const App = () => {
   return (
     <>
-      <Link to='/contacts'>Contacts</Link>
-      <br />
-      <Link to='/admin'>Admin Page 🤫</Link>
+      <div className='page-content'>
+        <Link to='/contacts'>Contacts</Link>
+        <br />
+        <Link to='/admin'>Admin Page 🤫</Link>
+      </div>
     </>
   )
 }

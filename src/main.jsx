@@ -5,6 +5,8 @@ import Contacts from './pages/Contacts.jsx'
 import Admin from './pages/Admin.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import NavigationBar from './components/Navigation/NavigationBar';
+import TopBaner from './components/TopBaner/TopBaner';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div className='page-content'>
+      <TopBaner />
+      <NavigationBar />
+      <RouterProvider router={router} />
+    </div>
   </React.StrictMode>,
 )
