@@ -1,10 +1,13 @@
 import './App.css'
+import { Link } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <a href='/contacts'>Contacts</a>
+      <Link to='/contacts'>Contacts</Link>
+      <br />
+      <Link to='/admin'>Admin Page 🤫</Link>
     </>
   )
 }
