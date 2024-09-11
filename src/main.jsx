@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Contacts from './pages/Contacts.jsx'
+import Admin from './pages/Admin.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import NavigationBar from './components/Navigation/NavigationBar';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     path: '/contacts',
     element: <Contacts />,
   },
+  {
+    path: '/admin',
+    element: <Admin />,
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
