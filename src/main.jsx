@@ -32,7 +32,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
       // Subscribe to authentication state changes
       const {
         data: { subscription },
-      } = await supabase.auth.onAuthStateChange((_event, session) => {
+      } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session)
       })
 

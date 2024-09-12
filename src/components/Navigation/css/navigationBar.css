@@ -1,34 +1,101 @@
-/* NavigationBar.css */
+/* Global reset */
+
+/* Navbar styling */
+.navbar-warpper {
+    position: relative;
+
+    @media (min-width: 768px) {
+        display: inline-flex;   
+    }
+}
+
 .navbar {
+    background-color: #b40024;
+    padding: 8px 16px;
     display: flex;
-    justify-content: center; /* Center the nav bar horizontally */
-    background-color: #ba0c2f;;
-    padding: 10px 0;
-    width: 100%; /* Make sure the navbar takes full width */
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
 .nav-links {
-    display: flex; /* Use Flexbox for the list items */
-    justify-content: space-between; /* Space items evenly */
-    list-style-type: none;
-    margin: 0;
+    display: none; /* Hide menu on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 48px; /* Adjust based on navbar height */
+    right: 0;
+    width: 100%; /* Full width for mobile */
+    background-color: #b40024; /* Background for mobile menu */
+    padding: 20px 0;
+    text-align: left;
+    list-style-type: none; /* Remove bullet points */
     padding: 0;
-    width: 100%; /* Make sure the list takes full width */
+    margin: 0;
+
+    @media (min-width: 768px) {
+        top: 0;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; /* Make sure the nav takes up the full width */
+        padding: 8px 30px 8px 30px;
+        margin: 0;
+    }
 }
 
+/* Styling individual items */
 .nav-links li {
-    flex: 1; /* Make each item take up equal space */
-    text-align: center; /* Center text within each item */
+    margin: 0 15px;
 }
 
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    display: block; /* Ensure the link is block-level for better clickable area */
-    padding: 4px 0; /* Add vertical padding */
+    padding: 0px; /* Add padding to make the links bigger */
+    color: white; /* Ensure the text color is readable */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    border-radius: 5px;
 }
 
+/* Hover effect for menu links */
 .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Lighten background on hover */
+    color: yellow; /* Change text color on hover */
     text-decoration: underline;
-    color: yellow;
 }
+
+/* Hamburger menu icon styling */
+.hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Display the mobile menu when toggled */
+.nav-links.open {
+    background-color: #b40024;
+    display: flex; /* Show the menu when hamburger is clicked */
+}
+
+.nav-links.open {
+    display: flex; /* Show links when hamburger is clicked */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 48px; /* Adjust the vertical position */
+    right: 0;
+    width: 100%; /* Full width for mobile */
+    background-color: #b40024; /* Background for better readability */
+    padding: 20px 0;
+}
+

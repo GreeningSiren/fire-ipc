@@ -1,5 +1,5 @@
 table {
-  background-color: white;
+  background-color: #fbf6f3;
   margin-top: 20px;
   border-collapse: collapse;
   width: 100%;
@@ -18,9 +18,13 @@ tr:nth-child(even) {
 
 .main-content {
   margin-block: 20px;
-  background: white;
+  background: rgba(251, 246, 243, 0.7);
   padding-block: 30px;
-  padding-inline: 60px;
+  padding-inline: 20px;
+
+  @media (min-width: 768px) {
+    padding-inline: 60px;   
+  }
 }
 
 .skt-content {

@@ -1,9 +1,23 @@
-import './css/NavigationBar.css';
+import React, { useState } from 'react';
+import './css/navigationBar.css';
 
 const NavigationBar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <nav className="navbar">
-            <ul className="nav-links">
+        <nav className="navbar-warpper">
+            <div className="navbar">
+                <div className="hamburger" onClick={toggleMenu}>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div>
+            </div>
+            <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                 <li><a href="/">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#services">Documents</a></li>

@@ -4,5 +4,36 @@ body {
 
 .page-body {
     background: url('/images/desktop-orange.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-attachment: fixed;
     min-height: 1000px;
+}
+
+.login-logout-button {
+    width: 25%;
+    align-self: center;
+    margin-top: 12px;
+
+    button {
+        font-size: 14px;
+        min-height: 32px;
+        height: 32px;
+        color: #fff;
+        background-color: #b40024;
+        border: 2px solid #b40024;
+        border-radius: 5px;
+        box-shadow: 0 0 0 3px transparent;
+        min-width: 80px;
+
+        @media (min-width: 768px) {
+
+        }
+    }
+
+    @media (min-width: 768px) {
+        align-self: flex-end;
+        flex: 0 0 10%;
+        margin-left: auto;
+        margin-top: unset;
+    }
 }

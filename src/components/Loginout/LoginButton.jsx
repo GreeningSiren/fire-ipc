@@ -3,7 +3,7 @@ export default function LoginButton() {
         window.location.href = '/login'
     }
     return (
-        <div>
+        <div className="login-logout-button">
             <button onClick={handleClick}>Login</button>
         </div>
     )

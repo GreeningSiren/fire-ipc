@@ -5,10 +5,10 @@ import './css/TopBaner.css';
 const TopBaner = ({ session }) => {
     return (
         <div className='top-banner'>
-        <img src="/images/logo.png" alt="Descriptive Alt Text" className="header-image" />
-        {session && <h1>Hello {session.email}</h1>}
-        {session && <LogoutButton />}
-        {!session && <LoginButton />}
+            <img src="/images/logo.png" alt="Descriptive Alt Text" className="header-image" />
+            {session && <div className='top-banner-greeting'>Hello {session.email}</div>}
+            {session && <LogoutButton />}
+            {!session && <LoginButton />}
         </div>
     );
 };
