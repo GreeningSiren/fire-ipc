@@ -27,10 +27,10 @@ export default function Admin({ session }) {
     }, [])
 
     if (!session) {
-        window.location.href = '/login'
+        window.location.href = '/'
     }
     if (session && session.user.id != "cd7e3c17-2a4f-4283-be06-0128f2fd057d") {
-        window.location.href = '/'
+        window.location.href = '/404'
         console.log(session.user.id)
         console.log("session.user.id != 'cd7e3c17-2a4f-4283-be06-0128f2fd057d'")
     }

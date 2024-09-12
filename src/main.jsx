@@ -13,6 +13,7 @@ import supabase from './utils/supabase.js';
 // import { ThemeSupa } from '@supabase/auth-ui-shared';
 import LoginForm from './pages/LoginForm.jsx';
 import Page404 from './pages/404.jsx'
+import ResetPasswordForm from './pages/ResetPasswordForm.jsx'
 
 // Create a router outside of the component
 
@@ -42,6 +43,15 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
       return () => subscription.unsubscribe()
     }
     getUser()
+
+    const hash = window.location.hash.substring(1);
+    const params = new URLSearchParams(hash);
+    const type = params.get('type');
+
+    // If the `type` parameter exists and equals 'recovery', redirect to /resetPassword
+    if (type === 'recovery') {
+      setTimeout(() => {window.location.href = '/resetPassword';}, 500)
+    }
   }, [])
 
   const router = createBrowserRouter([
@@ -61,6 +71,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/login',
       element: <LoginForm session={session} />
+    },
+    {
+      path: '/resetPassword',
+      element: <ResetPasswordForm />
     }
   ])
 

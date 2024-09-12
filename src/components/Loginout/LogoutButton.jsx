@@ -5,7 +5,7 @@ export default function LogoutButton() {
         supabase.auth.signOut()
         // localStorage.removeItem('sb-bqwrnxhhfnlqmgpskuzy-auth-token') // da e sigurno
         console.log("logout")
-        setTimeout(() => {window.location.href = '/'}, 500)
+        // setTimeout(() => {window.location.href = '/'}, 500)
         // window.open('/', '_self')
     }
     return (
