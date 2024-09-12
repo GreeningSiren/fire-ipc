@@ -9,7 +9,7 @@ export default function LogoutButton() {
         // window.open('/', '_self')
     }
     return (
-        <div>
+        <div className='login-logout-button'>
             <button onClick={handleClick}>Logout</button>
         </div>
     )
