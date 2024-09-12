@@ -21,28 +21,33 @@ import Page404 from './pages/404.jsx'
 
 function MainApp() { // eslint-disable-line react-refresh/only-export-components
   const [session, setSession] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Fetch the session on mount
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-    })
+    const getUser = async () => {
+      await supabase.auth.getSession().then(({ data: { session } }) => {
+        setSession(session)
+      })
 
-    // Subscribe to authentication state changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
-    })
+      // Subscribe to authentication state changes
+      const {
+        data: { subscription },
+      } = await supabase.auth.onAuthStateChange((_event, session) => {
+        setSession(session)
+      })
 
-    // Cleanup subscription on unmount
-    return () => subscription.unsubscribe()
+      setIsLoading(false)
+      // Fetch the session on mount
+      // Cleanup subscription on unmount
+      return () => subscription.unsubscribe()
+    }
+    getUser()
   }, [])
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <App session={session}/>,
+      element: <App session={session} />,
       errorElement: <Page404 />
     },
     {
@@ -51,7 +56,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     },
     {
       path: '/admin',
-      element: <Admin />,
+      element: <Admin session={session} />,
     },
     {
       path: '/login',
@@ -76,7 +81,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
       <div className='page-content'>
         {session ? <TopBaner session={session.user} /> : <TopBaner />}
         <NavigationBar />
-        <RouterProvider router={router} />
+        {!isLoading && <RouterProvider router={router} />}
       </div>
     </div>
   )
