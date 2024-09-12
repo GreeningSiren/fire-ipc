@@ -12,6 +12,7 @@ import supabase from './utils/supabase.js';
 // import { Auth } from '@supabase/auth-ui-react';
 // import { ThemeSupa } from '@supabase/auth-ui-shared';
 import LoginForm from './pages/LoginForm.jsx';
+import Page404 from './pages/404.jsx'
 
 // Create a router outside of the component
 
@@ -42,6 +43,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/',
       element: <App session={session}/>,
+      errorElement: <Page404 />
     },
     {
       path: '/contacts',
