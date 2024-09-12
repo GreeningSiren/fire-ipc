@@ -1,0 +1,20 @@
+{
+    "en": {
+        "Home": "Home",
+        "About us": "About us",
+        "Documents": "Documents",
+        "Calendar": "Calendar",
+        "Galery": "Galery",
+        "Contacts": "Contacts",
+        "News": "News"
+    },
+    "bg": {
+        "Home": "Начало",
+        "About us": "За нас",
+        "Documents": "Документи",
+        "Calendar": "Календар",
+        "Galery": "Галерия",
+        "Contacts": "Контакти",
+        "News": "Новини"
+    }
+}

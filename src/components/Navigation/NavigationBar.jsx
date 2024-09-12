@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './css/navigationBar.css';
+import Text from './../Text/Text.jsx';
 
 const NavigationBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +19,13 @@ const NavigationBar = () => {
                 </div>
             </div>
             <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#services">Documents</a></li>
-                <li><a href="#portfolio">Calendar</a></li>
-                <li><a href="#contact">Galery</a></li>
-                <li><a href="/contacts">Contacts</a></li>
-                <li><a href="#contact">News</a></li>
+                <li><a href="/"><Text word="Home" /></a></li>
+                <li><a href="#portfolio"><Text word="Calendar" /></a></li>
+                <li><a href="#about"><Text word="About us" /></a></li>
+                <li><a href="#services"><Text word="Documents" /></a></li>
+                <li><a href="#contact"><Text word="Galery" /></a></li>
+                <li><a href="/contacts"><Text word="Contacts" /></a></li>
+                <li><a href="#contact"><Text word="News" /></a></li>
             </ul>
         </nav>
     );
