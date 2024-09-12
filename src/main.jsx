@@ -64,18 +64,6 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     }
   ])
 
-  // if (!session) {
-  //   return (
-  //     <div className='page-body'>
-  //       <div className='page-content'>
-  //         <TopBaner />
-  //         <NavigationBar />
-  //         <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} providers={[]} />
-  //       </div>
-  //     </div>
-  //   )
-  // }
-
   return (
     <div className='page-body'>
       <div className='page-content'>

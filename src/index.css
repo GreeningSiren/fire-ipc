@@ -1,3 +1,7 @@
+body {
+    margin: 0
+}
+
 .page-body {
     background: url('/images/desktop-orange.jpg') no-repeat center center;
     min-height: 1000px;
