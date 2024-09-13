@@ -5,8 +5,8 @@ import './css/Calendar.css'
 export default function Calendar() {
     return (
         <div className='calendar-wrapper main-content'>
-            <h1 className='calendar-title'><Text word="CalendarCompetition"></Text></h1>
-            <div className='calendar-next'><Text word="CalendarNext"></Text></div>
+            <h1 className='calendar-title'><Text word="CalendarCompetition" /></h1>
+            <div className='calendar-next'><Text word="CalendarNext" /></div>
             <div className='calendar-competitions'>
                 <Competition
                     title="Файър Опън"
@@ -24,7 +24,7 @@ export default function Calendar() {
                     info="Състезанието е част от подготовката на младите таекуондо картечници, за предстоящия коледен голям международен турнир, подходящ е за всички възрастови групи!"
                     place="Зала Бургас Арена"/>
             </div>
-            <div className='calendar-next'><Text word="CalendarPast"></Text></div>
+            <div className='calendar-next'><Text word="CalendarPast" /></div>
             <Competition
                     title="Дупница Опън"
                     date="01.05.2024"

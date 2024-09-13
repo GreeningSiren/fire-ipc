@@ -11,7 +11,7 @@ export default function LogoutButton() {
     }
     return (
         <div className='login-logout-button'>
-            <button onClick={handleClick}><Text word="Logout"></Text></button>
+            <button onClick={handleClick}><Text word="Logout" /></button>
         </div>
     )
 }
