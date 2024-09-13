@@ -11,7 +11,7 @@
     img {
         width: 100%;
         @media (min-width: 768px) {
-            width: 50%;
+            width: 45%;
         }
     }
 }
@@ -23,21 +23,25 @@
     img {
         width: 26px;
         height: 18px;
-        margin-left: 8px;
+        padding-left: 8px;
     }
 
     @media (min-width: 768px) {
-        width: 18%;
+        width: 28%;
         align-self: center;
-        flex-direction: row-reverse;
-        padding-left: 2%;
+        flex-direction: row;
+        padding-left: 1%;
     }
 }
 
 .top-banner-phone {
     text-align: end;
     align-self: self-end;
-    flex: 0 0 83%;
+    width: calc(100% - 48px);
+
+    @media (min-width: 768px) {
+        flex: 0 0 65%;
+    }
 
     a {
         text-decoration: none;
@@ -47,11 +51,12 @@
 
 .top-banner-login {
     display: flex;
+    justify-content: end;
 
     @media (min-width: 768px) {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        width: 26%;
         align-self: center;
         gap: 16px;
     }
@@ -69,5 +74,6 @@
         margin-left: auto;
         margin-top: unset;
         align-self: flex-end;
+        text-align: left;
     }
 }

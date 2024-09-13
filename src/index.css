@@ -24,10 +24,6 @@ body {
         border-radius: 5px;
         box-shadow: 0 0 0 3px transparent;
         min-width: 80px;
-
-        @media (min-width: 768px) {
-
-        }
     }
 
     @media (min-width: 768px) {
@@ -35,5 +31,6 @@ body {
         flex: 0 0 10%;
         margin-left: auto;
         margin-top: unset;
+        width: auto;
     }
 }
