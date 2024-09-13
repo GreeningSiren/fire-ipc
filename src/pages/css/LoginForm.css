@@ -1,7 +1,16 @@
 .auth-a {
-    color: rgb(0, 0, 238);
+    color: rgb(0, 0, 238) !important;
+    font-weight: 700;
 }
 
 .auth-label {
     font-weight: 700;
+}
+
+.main-content-form {
+    padding-inline: 10%;
+
+    @media (min-width: 768px) {
+        padding-inline: 25%;
+    }
 }

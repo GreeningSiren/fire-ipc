@@ -6,7 +6,7 @@ import './css/LoginForm.css'
 export default function LoginForm({ session }) {
     if (!session) {
         return (
-            <div className='main-content'>
+            <div className='main-content main-content-form'>
                 <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa, extend: true, className: {
                     anchor: 'auth-a',
                     button: 'auth-button',
