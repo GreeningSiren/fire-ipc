@@ -1,7 +1,6 @@
 {
     "en": {
         "Home": "Home",
-        "About us": "About us",
         "Documents": "Documents",
         "Calendar": "Calendar",
         "Galery": "Galery",
@@ -26,7 +25,6 @@
     },
     "bg": {
         "Home": "Начало",
-        "About us": "За нас",
         "Documents": "Документи",
         "Calendar": "Календар",
         "Galery": "Галерия",
