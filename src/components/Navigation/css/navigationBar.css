@@ -82,12 +82,6 @@
     transition: 0.3s;
 }
 
-/* Display the mobile menu when toggled */
-.nav-links.open {
-    background-color: #b40024;
-    display: flex; /* Show the menu when hamburger is clicked */
-}
-
 .nav-links.open {
     display: flex; /* Show links when hamburger is clicked */
     flex-direction: column; /* Stack links vertically */
@@ -97,5 +91,10 @@
     width: 100%; /* Full width for mobile */
     background-color: #b40024; /* Background for better readability */
     padding: 20px 0;
+    gap: 4px;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 }
 
