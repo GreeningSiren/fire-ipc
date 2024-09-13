@@ -12,6 +12,22 @@
     }
 }
 
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-text {
+    width: 50%;
+    align-self: flex-start;
+}
+
+.footer-images {
+    width: 50%;
+    text-align: end;
+}
+
 .footer-phone {
     a {
         text-decoration: none;
@@ -22,4 +38,18 @@
 .footer-copyright {
     align-self: flex-end;
     font-size: 12px;
+}
+
+.footer-image-firelogo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-image-logo {
+    width: 100px;
+    height: 50px;
+
+    @media (min-width: 768px) {
+        width: 180px;
+    }
 }
