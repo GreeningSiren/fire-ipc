@@ -1,0 +1,32 @@
+.competition-wrapper {
+    color: #b40024;
+    border: 2px solid #b40024;
+    border-radius: 5px;
+    padding: 16px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: rgba(251, 246, 243, 0.7);;
+
+    @media (min-width: 768px) {
+        width: calc(50% - 44px);
+    }
+}
+
+.competition-title {
+    text-align: center;
+    margin: 0;
+}
+
+.competition-date {
+    color: black;
+}
+
+.competition-info {
+   
+}
+
+.competition-place {
+    color: black;
+}
