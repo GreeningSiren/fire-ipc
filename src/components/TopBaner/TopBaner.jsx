@@ -38,13 +38,13 @@ const TopBaner = ({ session }) => {
                     style={{ cursor: 'pointer' }}
                 />
                 <div className='top-banner-phone'>
-                    <a href="tel:+359896865981">✆ <Text word="Phone"></Text></a>
+                    <a href="tel:+359896865981">✆ <Text word="Phone" /></a>
                 </div>
             </div>
 
             <div className='top-banner-login'>
                 {/* Greeting and Session Logic */}
-                {session && <div className='top-banner-greeting'><Text word="Greeting"></Text> {session.email}</div>}
+                {session && <div className='top-banner-greeting'><Text word="Greeting" /> {session.email}</div>}
                 {session && <LogoutButton />}
                 {!session && <LoginButton />}
             </div>
