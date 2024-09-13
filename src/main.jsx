@@ -84,12 +84,12 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     }
   ])
 
-  return (
+  return !isLoading && (
     <div className='page-body'>
       <div className='page-content'>
         {session ? <TopBaner session={session.user} /> : <TopBaner />}
         <NavigationBar />
-        {!isLoading && <RouterProvider router={router} />}
+        <RouterProvider router={router} />
         <Footer />
       </div>
     </div>
