@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Contacts from './pages/Contacts.jsx'
+import Calendar from './pages/Calendar.jsx'
 import Admin from './pages/Admin.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -76,6 +77,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/resetPassword',
       element: <ResetPasswordForm />
+    },
+    {
+      path: '/calendar',
+      element: <Calendar />
     }
   ])
 

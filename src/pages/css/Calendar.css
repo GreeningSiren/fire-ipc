@@ -1,0 +1,27 @@
+.calendar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.calendar-title {
+    text-align: center;
+    color: #b40024;
+}
+
+.calendar-competitions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.calendar-next {
+    font-size: 24px;
+    text-align: center;
+}

@@ -20,7 +20,7 @@ const NavigationBar = () => {
             </div>
             <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                 <li><a href="/"><Text word="Home" /></a></li>
-                <li><a href="#portfolio"><Text word="Calendar" /></a></li>
+                <li><a href="/calendar"><Text word="Calendar" /></a></li>
                 <li><a href="#about"><Text word="About us" /></a></li>
                 <li><a href="#services"><Text word="Documents" /></a></li>
                 <li><a href="#contact"><Text word="Galery" /></a></li>
