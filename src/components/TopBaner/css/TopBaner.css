@@ -74,6 +74,6 @@
         margin-left: auto;
         margin-top: unset;
         align-self: flex-end;
-        text-align: left;
+        text-align: end;
     }
 }
