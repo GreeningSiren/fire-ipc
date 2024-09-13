@@ -1,7 +1,12 @@
 .top-banner {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-block: 13px;
+
+    @media (min-width: 768px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
     img {
         width: 100%;
@@ -11,11 +16,51 @@
     }
 }
 
+.language-switcher {
+    display: flex;
+    margin-top: 12px;
+
+    img {
+        width: 26px;
+        height: 18px;
+        margin-left: 8px;
+    }
+
+    @media (min-width: 768px) {
+        width: 18%;
+        align-self: center;
+        flex-direction: row-reverse;
+        padding-left: 2%;
+    }
+}
+
+.top-banner-phone {
+    text-align: end;
+    align-self: self-end;
+    flex: 0 0 83%;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.top-banner-login {
+    display: flex;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        align-self: center;
+        gap: 16px;
+    }
+}
+
 .top-banner-greeting {
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     width: 75%;
-    color: #b40024;
     margin-top: 20px;
 
     @media (min-width: 768px) {

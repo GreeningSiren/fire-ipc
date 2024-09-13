@@ -14,6 +14,7 @@ import supabase from './utils/supabase.js';
 import LoginForm from './pages/LoginForm.jsx';
 import Page404 from './pages/404.jsx'
 import ResetPasswordForm from './pages/ResetPasswordForm.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 // Create a router outside of the component
 
@@ -84,6 +85,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
         {session ? <TopBaner session={session.user} /> : <TopBaner />}
         <NavigationBar />
         {!isLoading && <RouterProvider router={router} />}
+        <Footer />
       </div>
     </div>
   )

@@ -1,0 +1,25 @@
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(251, 246, 243, 0.3);
+    padding-inline: 20px;
+    padding-block: 8px;
+    gap: 4px;
+    margin-bottom: 4px;
+
+    @media (min-width: 768px) {
+        padding-inline: 60px;
+    }
+}
+
+.footer-phone {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.footer-copyright {
+    align-self: flex-end;
+    font-size: 12px;
+}

@@ -1,6 +1,7 @@
 import LogoutButton from '../Loginout/LogoutButton';
 import LoginButton from '../Loginout/LoginButton';
 import './css/TopBaner.css';
+import Text from './../Text/Text.jsx';
 
 const TopBaner = ({ session }) => {
 
@@ -36,13 +37,17 @@ const TopBaner = ({ session }) => {
                     onClick={() => addEnglish(false)}
                     style={{ cursor: 'pointer' }}
                 />
+                <div className='top-banner-phone'>
+                    <a href="tel:+359896865981">✆ <Text word="Phone"></Text></a>
+                </div>
             </div>
-            <a href="tel:+359896865981">✆ +359896865981</a>
 
-            {/* Greeting and Session Logic */}
-            {session && <div className='top-banner-greeting'>Hello {session.email}</div>}
-            {session && <LogoutButton />}
-            {!session && <LoginButton />}
+            <div className='top-banner-login'>
+                {/* Greeting and Session Logic */}
+                {session && <div className='top-banner-greeting'><Text word="Greeting"></Text> {session.email}</div>}
+                {session && <LogoutButton />}
+                {!session && <LoginButton />}
+            </div>
         </div>
     );
 };

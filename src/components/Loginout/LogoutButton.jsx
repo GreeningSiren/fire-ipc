@@ -1,4 +1,5 @@
 import supabase from '../../utils/supabase'
+import Text from './../Text/Text';
 
 export default function LogoutButton() {
     const handleClick = () => {
@@ -10,7 +11,7 @@ export default function LogoutButton() {
     }
     return (
         <div className='login-logout-button'>
-            <button onClick={handleClick}>Logout</button>
+            <button onClick={handleClick}><Text word="Logout"></Text></button>
         </div>
     )
 }
