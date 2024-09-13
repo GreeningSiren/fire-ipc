@@ -21,6 +21,7 @@ tr:nth-child(even) {
   background: rgba(251, 246, 243, 0.7);
   padding-block: 30px;
   padding-inline: 20px;
+  min-height: 70vh;
 
   @media (min-width: 768px) {
     padding-inline: 60px;   
