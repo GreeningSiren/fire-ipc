@@ -17,7 +17,7 @@ export default function LoginForm({ session }) {
             }}}  providers={[]} />
         )
     }else {
-        setTimeout(() => {window.location.href = '/'}, 500)
+        setTimeout(() => {window.location.href = '/'}, 50)
     }
 }
 
