@@ -6,13 +6,13 @@ body {
     background: url('/images/desktop-orange.jpg') no-repeat center center;
     background-size: cover; /* Ensures the image covers the entire page */
     background-attachment: fixed;
-    min-height: 1000px;
 }
 
 .login-logout-button {
     width: 25%;
     align-self: center;
     margin-top: 12px;
+    text-align: end;
 
     button {
         font-size: 14px;
