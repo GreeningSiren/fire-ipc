@@ -27,3 +27,12 @@ export default function Competition({ title, date, info, place, winner }) {
         </div>
     );
 }
+
+import PropTypes from 'prop-types';
+Competition.propTypes = {
+    title: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    info: PropTypes.string,
+    place: PropTypes.string.isRequired,
+    winner: PropTypes.string,
+}
