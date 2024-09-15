@@ -15,7 +15,7 @@ import supabase from './utils/supabase.js';
 import LoginForm from './pages/LoginForm.jsx';
 import Page404 from './pages/404.jsx'
 import ResetPasswordForm from './pages/ResetPasswordForm.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import Footer from './components/Footer.jsx'
 import CompetitionPage from './pages/CompetitionPage.jsx'
 
 // Create a router outside of the component

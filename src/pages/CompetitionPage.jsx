@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import supabase from '../utils/supabase'
 import Text from '../components/Text'
 import './css/CompetitionPage.css';
-import TaekwondoForm from '../components/TaekwondoForm/TaekwondoForm';
-import ParticipantList from '../components/ParticipantList/ParticipantList';
+import TaekwondoForm from '../components/TaekwondoForm';
+import ParticipantList from '../components/ParticipantList';
 
 export default function CompetitionPage() {
     const { id } = useParams()
