@@ -50,11 +50,11 @@ export default function Calendar() {
             {!isLoading ? <div>
                 <div className='calendar-next'><Text word="CalendarNext" /></div>
                 <div className='calendar-competitions'>
-                    {upcoming.map((competition) => <Competition key={competition.id} title={competition.title} date={convertDateToDDMMYYYY(competition.date)} info={competition.info} place={competition.place} />)}
+                    {upcoming.map((competition) => <Competition key={competition.id} id={competition.id} title={competition.title} date={convertDateToDDMMYYYY(competition.date)} info={competition.info} place={competition.place} />)}
                 </div>
                 <div className='calendar-next'><Text word="CalendarPast" /></div>
                 <div className='calendar-competitions'>
-                    {past.map((competition) => <Competition key={competition.id} title={competition.title} date={convertDateToDDMMYYYY(competition.date)} info={competition.info} place={competition.place} />)}
+                    {past.map((competition) => <Competition key={competition.id} id={competition.id} title={competition.title} date={convertDateToDDMMYYYY(competition.date)} info={competition.info} place={competition.place} />)}
                 </div>
             </div> : <h1 className='calendar-next'>Loading...</h1>}
         </div>

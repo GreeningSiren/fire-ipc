@@ -22,7 +22,10 @@
         "Address": "Address: Sofia",
         "CalendarCompetition": "Calendar Competitions",
         "CalendarNext": "Upcoming competitions:",
-        "CalendarPast": "Past competitions:"
+        "CalendarPast": "Past competitions:",
+        "Where": "Where: ",
+        "When": "When: ",
+        "ReadMore": "Add participant"
     },
     "bg": {
         "Home": "Начало",
@@ -47,6 +50,9 @@
         "Address": "Адрес: София",
         "CalendarCompetition": "Календар Състезания",
         "CalendarNext": "Предстоящи състезания:",
-        "CalendarPast": "Минали Състезания:"
+        "CalendarPast": "Минали Състезания:",
+        "Where": "Къде: ",
+        "When": "Кога: ",
+        "ReadMore": "Добави участник"
     }
 }

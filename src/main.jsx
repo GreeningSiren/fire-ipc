@@ -16,6 +16,7 @@ import LoginForm from './pages/LoginForm.jsx';
 import Page404 from './pages/404.jsx'
 import ResetPasswordForm from './pages/ResetPasswordForm.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import CompetitionPage from './pages/CompetitionPage.jsx'
 
 // Create a router outside of the component
 
@@ -81,6 +82,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/calendar',
       element: <Calendar />
+    },
+    {
+      path: '/competition/:id',
+      element: <CompetitionPage />
     }
   ])
 
