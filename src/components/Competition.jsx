@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Text from './Text';
-import Medals from './Medals/Medals';
+import Medals from './Medals';
 import './css/Competition.css';
 
 export default function Competition({ id, title, date, info, place, addParticipant, medals }) {

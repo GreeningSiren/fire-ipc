@@ -1,5 +1,5 @@
 import LogoutButton from './LogoutButton.jsx';
-import LoginButton from '../Loginout/LoginButton';
+import LoginButton from './LoginButton.jsx';
 import './css/TopBaner.css';
 import Text from './Text.jsx';
 

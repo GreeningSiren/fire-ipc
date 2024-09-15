@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './css/TaekwondoForm.css';
-import Text from "../Text/Text";
+import Text from "./Text";
 
 function TaekwondoForm() {
   const [firstName, setFirstName] = useState("");
