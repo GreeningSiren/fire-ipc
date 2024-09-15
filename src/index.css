@@ -14,18 +14,6 @@ body {
     margin-top: 12px;
     text-align: end;
 
-    button {
-        font-size: 14px;
-        min-height: 32px;
-        height: 32px;
-        color: #fff;
-        background-color: #b40024;
-        border: 2px solid #b40024;
-        border-radius: 5px;
-        box-shadow: 0 0 0 3px transparent;
-        min-width: 80px;
-    }
-
     @media (min-width: 768px) {
         align-self: flex-end;
         flex: 0 0 10%;
@@ -37,4 +25,47 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.button-main {
+    font-size: 14px;
+    min-height: 32px;
+    height: 32px;
+    color: #fff;
+    background-color: #b40024;
+    border: 2px solid #b40024;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px transparent;
+    min-width: 80px;
+}
+
+.input {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: text;
+    border: 1px solid gray;
+    font-size: 14px;
+    width: 100%;
+    color: black;
+    box-sizing: border-box;
+}
+
+.label {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    color: gray;
+    padding-bottom: 4px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: start;
+    font-weight: 700;
+    color: gray;
 }

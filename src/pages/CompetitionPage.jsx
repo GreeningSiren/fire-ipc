@@ -1,6 +1,10 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import supabase from '../utils/supabase'
+import Text from '../Components/Text/Text'
+import './css/CompetitionPage.css';
+import TaekwondoForm from '../components/TaekwondoForm/TaekwondoForm';
+import ParticipantList from '../components/ParticipantList/ParticipantList';
 
 export default function CompetitionPage() {
     const { id } = useParams()
@@ -33,15 +37,24 @@ export default function CompetitionPage() {
     }
 
     return !isLoading ? (
-        <div className='main-content text-center'>
+        <div className='main-content main-content-form text-center'>
 
             <h1 className=''>{data.title}</h1>
 
-            <p>Къде: {data.place}</p>
+            <div className='competition-place display-flex'>
+                <div className='competition-where'><Text word="Where" />{data.place}</div>
+                <div className='competition-when'><Text word="When" />{convertDateToDDMMYYYY(data.date)}</div>
+            </div>
 
-            <p>Кога: {convertDateToDDMMYYYY(data.date)}</p>
+            <h2 className='form-title'>
+                <Text word="AddParticipant" />
+            </h2>
 
-            <Link to="/calendar">Назад</Link>
+            <TaekwondoForm />
+
+            <ParticipantList />
+
+            <Link className='competition-back' to="/calendar"><Text word="Back"/></Link>
         </div>
     ) : (
         <h1>Loading...</h1>

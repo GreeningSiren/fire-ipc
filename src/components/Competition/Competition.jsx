@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import Text from './../Text/Text';
+import Medals from '../Medals/Medals';
 import './css/Competition.css';
 
-export default function Competition({ id, title, date, info, place }) {
+export default function Competition({ id, title, date, info, place, addParticipant, medals }) {
     // const toggleReadMode = (e) => {
     //     const card = e.currentTarget.parentElement; // Get the parent competition-wrapper
     //     const textElement = card.querySelector('.competition-info'); // Scope to the current card
@@ -23,7 +24,8 @@ export default function Competition({ id, title, date, info, place }) {
             <div className='competition-date'><Text word="When" />{date}</div>
             <div className='competition-info'>{info}</div>
             <div className='competition-place'><Text word="Where" />{place}</div>
-            <Link className='toggle-button' to={"/competition/" + id}><Text word="ReadMore" /></Link>
+            {!addParticipant && <Link className='toggle-button text-center' to={"/competition/" + id}><Text word="AddParticipant" /></Link>}
+            {medals && <Medals medals={medals}/>}
         </div>
     );
 }
@@ -35,4 +37,6 @@ Competition.propTypes = {
     date: PropTypes.string.isRequired,
     info: PropTypes.string,
     place: PropTypes.string.isRequired,
+    addParticipant: PropTypes.any,
+    medals: PropTypes.string,
 }

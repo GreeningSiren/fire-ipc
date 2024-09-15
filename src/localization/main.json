@@ -25,7 +25,13 @@
         "CalendarPast": "Past competitions:",
         "Where": "Where: ",
         "When": "When: ",
-        "ReadMore": "Add participant"
+        "AddParticipant": "Add participant",
+        "Poomsae": "Poomsae",
+        "Sparing": "Sparing",
+        "FirstName": "First Name:",
+        "LastName": "Last Name:",
+        "AddParticipantForm": "Add",
+        "Back": "back"
     },
     "bg": {
         "Home": "Начало",
@@ -53,6 +59,12 @@
         "CalendarPast": "Минали Състезания:",
         "Where": "Къде: ",
         "When": "Кога: ",
-        "ReadMore": "Добави участник"
+        "AddParticipant": "Добави участник",
+        "Poomsae": "Пумсе",
+        "Sparing": "Спаринг",
+        "FirstName": "Име:",
+        "LastName": "Фамилия:",
+        "AddParticipantForm": "Добави",
+        "Back": "назад"
     }
 }

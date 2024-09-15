@@ -14,3 +14,8 @@
         padding-inline: 25%;
     }
 }
+
+.auth-button {
+    background-color: #b40024 !important;
+    border-color: #b40024 !important;
+}

@@ -1,0 +1,23 @@
+.participant {
+    flex-direction: row;
+    border: 1px solid #b40024;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.participant-title {
+    color: #b40024;
+}
+
+.participant-name {
+    width: 60%;
+    text-align: start;
+}
+
+.participant-poumsea {
+    width: 20%;
+}
+
+.participant-sparing {
+    width: 20%;
+}
