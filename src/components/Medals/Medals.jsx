@@ -1,13 +1,14 @@
 import Text from './../Text/Text';
 import './css/Medals.css';
+import { useState, useEffect } from 'react';
 
 export default function Medals({medals}) {
-    var {gold, silver, bronze} = medals.split('-');
+    const medal = medals.split('-');
     return (
         <div className="medals-wrapper">
-            <div className='medals-gold'>Златни: {gold}</div>
-            <div className='medals-silver'>Сребърни: {silver}</div>
-            <div className='medals-bronze'>Бронзови: {bronze}</div>
+            <div className='medals-gold'>Златни: {medal[0]}</div>
+            <div className='medals-silver'>Сребърни: {medal[1]}</div>
+            <div className='medals-bronze'>Бронзови: {medal[2]}</div>
         </div>
     )
 }
