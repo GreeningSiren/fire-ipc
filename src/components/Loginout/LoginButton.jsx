@@ -6,7 +6,7 @@ export default function LoginButton() {
     }
     return (
         <div className="login-logout-button">
-            <button onClick={handleClick}><Text word="Login" /></button>
+            <button className='button-main' onClick={handleClick}><Text word="Login" /></button>
         </div>
     )
 }

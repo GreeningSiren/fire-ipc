@@ -16,7 +16,8 @@
 
 .competition-title {
     text-align: center;
-    margin: 0;
+    margin: 4px 0 0;
+    min-height: 60px;
 }
 
 .competition-date {
@@ -41,8 +42,8 @@
 .toggle-button {
     cursor: pointer;
     text-decoration: underline;
-    margin-top: -6px;
-    font-size: 12px;
+    font-size: 16px;
+    color: #b40024;
 }
 
 .competition-place {

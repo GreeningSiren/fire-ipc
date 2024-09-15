@@ -1,7 +1,6 @@
 .calendar-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 }
 
 .calendar-title {
@@ -24,4 +23,5 @@
 .calendar-next {
     font-size: 24px;
     text-align: center;
+    margin: 8px 0;
 }

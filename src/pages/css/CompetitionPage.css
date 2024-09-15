@@ -1,0 +1,23 @@
+.competition-place {
+    flex-direction: row;
+}
+
+.competition-where {
+    align-self: flex-start;
+    width: 50%;
+}
+
+.competition-when {
+    align-self: flex-end;
+    width: 50%;
+}
+
+.competition-back {
+    display: block;
+    margin: 40px 0 12px;
+    text-align: left;
+}
+
+.form-title {
+    color: #b40024;
+}
