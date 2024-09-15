@@ -1,7 +1,7 @@
-import LogoutButton from '../Loginout/LogoutButton';
+import LogoutButton from './LogoutButton.jsx';
 import LoginButton from '../Loginout/LoginButton';
 import './css/TopBaner.css';
-import Text from './../Text/Text.jsx';
+import Text from './Text.jsx';
 
 const TopBaner = ({ session }) => {
 

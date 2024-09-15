@@ -1,6 +1,6 @@
 import './App.css'
 import { Link } from 'react-router-dom'
-import Text from './components/Text/Text';
+import Text from './components/Text';
 
 const App = ({ session }) => {
   return (

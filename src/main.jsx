@@ -6,8 +6,8 @@ import Calendar from './pages/Calendar.jsx'
 import Admin from './pages/Admin.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import NavigationBar from './components/Navigation/NavigationBar';
-import TopBaner from './components/TopBaner/TopBaner';
+import NavigationBar from './components/NavigationBar.jsx';
+import TopBaner from './components/TopBaner.jsx';
 // import LogoutButton from './components/LogoutButton.jsx'
 import supabase from './utils/supabase.js';
 // import { Auth } from '@supabase/auth-ui-react';

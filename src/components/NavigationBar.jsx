@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './css/navigationBar.css';
-import Text from './../Text/Text.jsx';
+import Text from './Text.jsx';
 
 const NavigationBar = () => {
     const [windowSize, setWindowSize] = useState(window.innerWidth);

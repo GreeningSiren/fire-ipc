@@ -1,5 +1,5 @@
-import Text from './../components/Text/Text';
-import Competition from './../components/Competition/Competition';
+import Text from '../components/Text';
+import Competition from '../components/Competition';
 import './css/Calendar.css'
 import supabase from './../utils/supabase'
 import { useState, useEffect } from 'react';

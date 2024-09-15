@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import localizationData from "./../../localization/main.json"; // Import JSON data
+import localizationData from "../localization/main.json"; // Import JSON data
 
 const Text = ({ word }) => {
     const [language, setLanguage] = useState("bg"); // Default language

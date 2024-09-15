@@ -1,5 +1,5 @@
-import supabase from '../../utils/supabase'
-import Text from './../Text/Text';
+import supabase from '../utils/supabase'
+import Text from './Text';
 
 export default function LogoutButton() {
     const handleClick = async () => {
