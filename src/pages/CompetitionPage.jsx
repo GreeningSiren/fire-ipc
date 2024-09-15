@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import supabase from '../utils/supabase'
-import Text from '../Components/Text/Text'
+import Text from '../components/Text/Text'
 import './css/CompetitionPage.css';
 import TaekwondoForm from '../components/TaekwondoForm/TaekwondoForm';
 import ParticipantList from '../components/ParticipantList/ParticipantList';
