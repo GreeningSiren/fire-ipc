@@ -24,21 +24,6 @@
     color: black;
 }
 
-.competition-info {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
-    max-height: 6.5em;
-}
-
-.competition-info.expanded {
-    -webkit-line-clamp: unset; /* Remove line clamp */
-    max-height: none; /* Allow full height */
-}
-
 .toggle-button {
     cursor: pointer;
     text-decoration: underline;
