@@ -3,7 +3,7 @@ import './css/Footer.css';
 
 export default function Footer() {
     return (
-        <div className="footer-wrapper">
+        <footer className="footer-wrapper">
             <div className='footer-copyright'><Text word="CopyRight" /></div>
             <div className='footer-left'>
                 <div className='footer-text'>
@@ -12,10 +12,10 @@ export default function Footer() {
                     <div className='footer-address'><Text word="Address" /></div>
                 </div>
                 <div className='footer-images'>
-                    <img src="/images/logo.png" alt="Descriptive Alt Text" className="footer-image-logo" />
-                    <img src="/images/firelogo.png" alt="Descriptive Alt Text" className="footer-image-firelogo" />
+                    <img src="/images/logo.png" alt="Fire Logo" className="footer-image-logo" />
+                    <img src="/images/firelogo.png" alt="Fire Logo" className="footer-image-firelogo" />
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }

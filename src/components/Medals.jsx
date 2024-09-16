@@ -14,5 +14,5 @@ export default function Medals({medals}) {
 
 import PropTypes from 'prop-types';
 Medals.propTypes = {
-    medals: PropTypes.array,
+    medals: PropTypes.string,
 }

@@ -20,8 +20,8 @@ const TopBaner = ({ session }) => {
     return (
         <div className='top-banner'>
             <div className='header-image'>
-                <img src="/images/firelogo.png" alt="Descriptive Alt Text" className="header-image-firelogo" />
-                <img src="/images/logo.png" alt="Descriptive Alt Text" className="header-image-logo" />
+                <img src="/images/firelogo.png" alt="Fire Logo" className="header-image-firelogo" />
+                <img src="/images/logo.png" alt="Fire Logo" className="header-image-logo" />
             </div>
             {/* Language Flags */}
             <div className="language-switcher">
