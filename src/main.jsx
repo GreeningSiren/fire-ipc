@@ -94,10 +94,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
       <div className='page-content'>
         {session ? <TopBaner session={session.user} /> : <TopBaner />}
         <NavigationBar />
-        <video className="logo-video" autoPlay loop muted>
+        {/* <video className="logo-video" autoPlay loop muted>
                 <source src="/images/video-logo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
-            </video>
+            </video> */}
         <RouterProvider router={router} />
         <Footer />
       </div>
