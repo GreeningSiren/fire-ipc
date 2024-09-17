@@ -17,6 +17,8 @@ import Page404 from './pages/404.jsx'
 import ResetPasswordForm from './pages/ResetPasswordForm.jsx'
 import Footer from './components/Footer.jsx'
 import CompetitionPage from './pages/CompetitionPage.jsx'
+import Document from './pages/Documents.jsx'
+import Gallery from './pages/Gallery.jsx'
 
 // Create a router outside of the component
 
@@ -86,6 +88,14 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/competition/:id',
       element: <CompetitionPage />
+    },
+    {
+      path: '/documents',
+      element: <Document />
+    },
+    {
+      path: '/gallery',
+      element: <Gallery />
     }
   ])
 
