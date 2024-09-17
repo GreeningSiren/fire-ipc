@@ -3,6 +3,7 @@ import Competition from '../components/Competition';
 import './css/Calendar.css'
 import supabase from './../utils/supabase'
 import { useState, useEffect } from 'react';
+import Header from '../components/Header';
 
 export default function Calendar() {
     const [isLoading, setIsLoading] = useState(true)
@@ -46,6 +47,7 @@ export default function Calendar() {
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
     return(
         <div className='calendar-wrapper main-content'>
+            <Header t d>Calendar</Header>
             <h1 className='calendar-title'><Text word="CalendarCompetition" /></h1>
             {!isLoading ? <div>
                 <div className='calendar-next'><Text word="CalendarNext" /></div>

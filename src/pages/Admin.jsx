@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import supabase from '../utils/supabase'
 import './css/Admin.css'
 import { Link } from 'react-router-dom'
+import Header from '../components/Header';
 
 export default function Admin({ session }) {
     const [users, setUsers] = useState(null)
@@ -37,6 +38,7 @@ export default function Admin({ session }) {
 
     return (
         <>
+            <Header t>Admin</Header>
             {!users && <p>Loading...</p>}
             {error && <p>{error.message}</p>}
             {users && (

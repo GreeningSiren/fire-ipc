@@ -1,8 +1,10 @@
+import Header from "../components/Header";
 import Text from "../components/Text";
 
 export default function Contacts() {
     return (
         <div className="main-content">
+            <Header t d>Contacts</Header>
             <h1><Text word="Contacts" /></h1>
             <p>Адрес: гр.София</p>
 

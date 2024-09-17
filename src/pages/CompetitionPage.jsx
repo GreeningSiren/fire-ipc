@@ -5,6 +5,7 @@ import Text from '../components/Text'
 import './css/CompetitionPage.css';
 import TaekwondoForm from '../components/TaekwondoForm';
 import ParticipantList from '../components/ParticipantList';
+import Header from '../components/Header';
 
 export default function CompetitionPage() {
     const { id } = useParams()
@@ -38,6 +39,7 @@ export default function CompetitionPage() {
 
     return !isLoading ? (
         <div className='main-content main-content-form text-center'>
+            <Header t d>{data.title}</Header>
 
             <h1 className=''>{data.title}</h1>
 

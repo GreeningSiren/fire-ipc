@@ -19,7 +19,7 @@ const TopBaner = ({ session }) => {
 
     return (
         <div className='top-banner'>
-            <div className='header-image'>3
+            <div className='header-image'>
                 <img src="/images/firelogo.png" alt="Fire Logo" className="header-image-firelogo" />
                 <img src="/images/logo.png" alt="Fire Logo" className="header-image-logo" />
             </div>
