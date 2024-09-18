@@ -23,7 +23,6 @@ export default function CompetitionPage() {
             if (error) {
                 console.log(error)
             } else {
-                console.log(data)
                 setData(data)
             }
         }
