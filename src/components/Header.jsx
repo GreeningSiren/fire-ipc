@@ -22,5 +22,5 @@ import PropTypes from 'prop-types'
 Header.propTypes = {
     t: PropTypes.bool,
     d: PropTypes.bool,
-    children: PropTypes.string.isRequired
+    children: PropTypes.string
 }
