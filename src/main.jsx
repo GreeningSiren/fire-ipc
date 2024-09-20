@@ -101,7 +101,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     },
     {
       path: '/news',
-      element: <NewsPage />
+      element: <NewsPage session={session} />
     },
     {
       path: '/camps',
