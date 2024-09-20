@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import localizationData from "../localization/main.json"; // Import JSON data
+import parse from 'html-react-parser';
 
 const Text = ({ word }) => {
     const [language, setLanguage] = useState("bg"); // Default language
@@ -16,12 +17,12 @@ const Text = ({ word }) => {
         if (localizationData[language] && localizationData[language][key]) {
             return localizationData[language][key];
         } else {
-            return key; // Fallback to key if translation not found
+            return localizationData['bg'][key];; // Fallback to key if translation not found
         }
     };
 
     return (
-        getLocalizedWord(word)
+        parse(getLocalizedWord(word))
     );
 };
 

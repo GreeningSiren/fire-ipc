@@ -32,7 +32,6 @@
     padding: 20px 0;
     text-align: left;
     list-style-type: none; /* Remove bullet points */
-    padding: 0;
     margin: 0;
 
     @media (min-width: 768px) {
@@ -42,7 +41,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%; /* Make sure the nav takes up the full width */
-        padding: 8px 30px 8px 30px;
+        padding: 8px 30px;
         margin: 0;
     }
 }
@@ -92,6 +91,7 @@
     background-color: #b40024; /* Background for better readability */
     padding: 20px 0;
     gap: 4px;
+    z-index: 1000;
 
     @media (min-width: 768px) {
         display: none;

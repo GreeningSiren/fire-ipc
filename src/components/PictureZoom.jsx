@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './css/PictureZoom.css';
 
 const PictureZoom = ({ images }) => {
@@ -45,5 +45,15 @@ const PictureZoom = ({ images }) => {
     </div>
   );
 };
+
+import PropTypes from 'prop-types';
+PictureZoom.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string,
+      alt: PropTypes.string
+    })
+  )
+}
 
 export default PictureZoom;
