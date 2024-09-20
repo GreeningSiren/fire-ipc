@@ -5,3 +5,8 @@
     max-width: 1000px;
     margin: 0 auto;
 }
+
+.video-logo {
+    width: 100%;
+    margin-bottom: 12px;
+}

@@ -5,7 +5,7 @@ export default function Contacts() {
     return (
         <div className="main-content">
             <Header t d>Contacts</Header>
-            <h1><Text word="Contacts" /></h1>
+            <h1 className="text-center color-red"><Text word="Contacts" /></h1>
             <p>Адрес: гр.София</p>
 
             <p>Христо Върбанов - V дан: <a href="tel:+359896865981">✆ <Text word="Phone" /></a></p>

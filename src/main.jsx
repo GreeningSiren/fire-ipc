@@ -19,6 +19,7 @@ import Footer from './components/Footer.jsx'
 import CompetitionPage from './pages/CompetitionPage.jsx'
 import Document from './pages/Documents.jsx'
 import Gallery from './pages/Gallery.jsx'
+import NewsPage from './pages/NewsPage.jsx'
 
 // Create a router outside of the component
 
@@ -96,6 +97,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/gallery',
       element: <Gallery />
+    },
+    {
+      path: '/news',
+      element: <NewsPage />
     }
   ])
 

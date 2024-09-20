@@ -6,10 +6,19 @@ import Header from './components/Header';
 
 const App = ({ session }) => {
   const [isVideoEnded, setIsVideoEnded] = useState(false);
-  return isVideoEnded ?(
+  return (
     <>
-      <Header t>Home</Header>
+    <Header t>Home</Header>
       <div className='main-content'>
+        <div>
+          <video
+            className='video-logo'
+            src="/images/video-logo.mp4"
+            loop
+            autoPlay
+            muted
+            onEnded={() => setIsVideoEnded(true)}
+          />
           <Text word="MainTextOne" /><br />
           <Text word="MainTextTwo" /><br />
           <Text word="MainTextThree" /><br />
@@ -18,18 +27,36 @@ const App = ({ session }) => {
           <Text word="MainTextSix" /><br />
           <br />
           <div className='skt-content'><Text word="CopyRight" /></div>
+        </div>
       </div>
       
       {session && session.user.id == "cd7e3c17-2a4f-4283-be06-0128f2fd057d" && <Link to='/admin'>Admin Page 🤫</Link>}
     </>
-  ): (
-    <video
-      src="/images/video-logo.mp4"
-      autoPlay
-      muted
-      onEnded={() => setIsVideoEnded(true)}
-    />
-  );
+  )
+  // return isVideoEnded ?(
+  //   <>
+  //     <Header t>Home</Header>
+  //     <div className='main-content'>
+  //         <Text word="MainTextOne" /><br />
+  //         <Text word="MainTextTwo" /><br />
+  //         <Text word="MainTextThree" /><br />
+  //         <Text word="MainTextFour" /><br />
+  //         <Text word="MainTextFive" /><br />
+  //         <Text word="MainTextSix" /><br />
+  //         <br />
+  //         <div className='skt-content'><Text word="CopyRight" /></div>
+  //     </div>
+      
+  //     {session && session.user.id == "cd7e3c17-2a4f-4283-be06-0128f2fd057d" && <Link to='/admin'>Admin Page 🤫</Link>}
+  //   </>
+  // ): (
+  //   <video
+  //     src="/images/video-logo.mp4"
+  //     autoPlay
+  //     muted
+  //     onEnded={() => setIsVideoEnded(true)}
+  //   />
+  // );
 }
 import PropTypes from 'prop-types'
 App.propTypes = {
