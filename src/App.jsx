@@ -1,11 +1,11 @@
 import './App.css'
-import { useState } from 'react';
+//import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import Text from './components/Text';
 import Header from './components/Header';
 
 const App = ({ session }) => {
-  const [isVideoEnded, setIsVideoEnded] = useState(false);
+  //const [isVideoEnded, setIsVideoEnded] = useState(false);
   return (
     <>
     <Header t>Home</Header>
@@ -17,7 +17,6 @@ const App = ({ session }) => {
             loop
             autoPlay
             muted
-            onEnded={() => setIsVideoEnded(true)}
           />
           <Text word="MainTextOne" /><br />
           <Text word="MainTextTwo" /><br />
