@@ -17,7 +17,7 @@ const Text = ({ word }) => {
         if (localizationData[language] && localizationData[language][key]) {
             return localizationData[language][key];
         } else {
-            return localizationData['bg'][key];; // Fallback to key if translation not found
+            return localizationData['bg'][key]; // Fallback to key if translation not found
         }
     };
 
