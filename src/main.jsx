@@ -20,6 +20,7 @@ import CompetitionPage from './pages/CompetitionPage.jsx'
 import Document from './pages/Documents.jsx'
 import Gallery from './pages/Gallery.jsx'
 import NewsPage from './pages/NewsPage.jsx'
+import CampsPage from './pages/CampsPage.jsx'
 
 // Create a router outside of the component
 
@@ -101,6 +102,10 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     {
       path: '/news',
       element: <NewsPage />
+    },
+    {
+      path: '/camps',
+      element: <CampsPage />
     }
   ])
 
