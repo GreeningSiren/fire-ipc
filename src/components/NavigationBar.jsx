@@ -37,6 +37,7 @@ const NavigationBar = () => {
             <ul className={`nav-links ${isOpen ? "open" : ""}`}>
                 <li><a href="/"><Text word="Home" /></a></li>
                 <li><a href="/calendar"><Text word="Calendar" /></a></li>
+                <li><a href="/camps"><Text word="Camps" /></a></li>
                 <li><a href="/documents"><Text word="Documents" /></a></li>
                 <li><a href="/gallery"><Text word="Gallery" /></a></li>
                 <li><a href="/contacts"><Text word="Contacts" /></a></li>
