@@ -3,7 +3,7 @@ import './css/NewsPage.css';
 import SingleNews from '../components/SingleNews';
 import Header from '../components/Header';
 
-export default function NewsPage() {
+export default function NewsPage({session}) {
     return (
         <div className='main-content main-content-form'>
             <Header t d>News</Header>
@@ -12,7 +12,12 @@ export default function NewsPage() {
 
 
             <SingleNews title="Schedule" content="ScheduleContent"/>
-            <SingleNews title="Payment" content="PaymentContent"/>
+            {session && <SingleNews title="Payment" content="PaymentContent"/>}
         </div>
     )
+}
+
+import PropTypes from 'prop-types'
+NewsPage.propTypes = {
+  session: PropTypes.object,
 }
