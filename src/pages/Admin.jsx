@@ -3,6 +3,7 @@ import supabase from '../utils/supabase'
 import './css/Admin.css'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header';
+import { Helmet } from 'react-helmet';
 
 export default function Admin({ session }) {
     const [users, setUsers] = useState(null)
@@ -39,6 +40,7 @@ export default function Admin({ session }) {
     return (
         <>
             <Header t>Admin</Header>
+            <Helmet><meta name="robots" content="noindex" /></Helmet>
             {!users && <p>Loading...</p>}
             {error && <p>{error.message}</p>}
             {users && (
