@@ -8,13 +8,11 @@ const TopBaner = ({ session }) => {
     // Function to handle language change
     const addEnglish = (en) => {
         if (en) {
-            // document.body.classList.add('en');
             localStorage.setItem('en', 'true');
-            window.location.reload();
         } else {
             localStorage.removeItem('en');
-            window.location.reload()
         }
+        window.dispatchEvent(new Event("localStorageChanged"));
     }
 
     return (

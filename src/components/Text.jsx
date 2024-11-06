@@ -3,24 +3,39 @@ import localizationData from "../localization/main.json"; // Import JSON data
 import parse from 'html-react-parser';
 
 const Text = ({ word }) => {
-    const [language, setLanguage] = useState("bg"); // Default language
+    // Set initial language based on whether "en" is in localStorage
+    const [language, setLanguage] = useState(localStorage.getItem("en") ? "en" : "bg");
 
-    useEffect(() => {
-        // Check language from body class, assuming body class contains either 'en' or 'bg'
-        if (localStorage.getItem("en")) {
-            setLanguage("en");
-        }
-    }, []); // Runs once when the component mounts
-
-    const getLocalizedWord = (key) => {
-        // Access the localization data for the given key and current language
-        if (localizationData[language] && localizationData[language][key]) {
-            return localizationData[language][key];
-        } else {
-            return localizationData['bg'][key]; // Fallback to key if translation not found
-        }
+    // Function to update language state based on "en" presence in localStorage
+    const updateLanguage = () => {
+        setLanguage(localStorage.getItem("en") ? "en" : "bg");
     };
 
+    useEffect(() => {
+        // Listen for `storage` events (cross-tab changes)
+        const handleStorageChange = (e) => {
+            if (e.key === "en") {
+                updateLanguage();
+            }
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+
+        // Custom event for same-tab updates
+        const customEventListener = () => updateLanguage();
+        window.addEventListener("localStorageChanged", customEventListener);
+
+        // Clean up listeners on component unmount
+        return () => {
+            window.removeEventListener("storage", handleStorageChange);
+            window.removeEventListener("localStorageChanged", customEventListener);
+        };
+    }, []);
+    
+    const getLocalizedWord = (key) => {
+        return localizationData?.[language]?.[key] || localizationData?.['bg']?.[key] || key;
+    };
+    
     return (
         parse(getLocalizedWord(word))
     );
