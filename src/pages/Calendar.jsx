@@ -44,7 +44,7 @@ export default function Calendar() {
             setIsLoading(false)
         }
         getCompetitions()
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, [])
     return(
         <div className='calendar-wrapper main-content'>
             <Header t d>Calendar</Header>
