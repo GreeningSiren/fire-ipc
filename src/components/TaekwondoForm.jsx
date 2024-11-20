@@ -25,7 +25,7 @@ function TaekwondoForm() {
     setLastName("");
     setPoomsae(false);
     setSparring(false);
-    setSparring(false);
+    setFreestyle(false);
   };
 
   return (
