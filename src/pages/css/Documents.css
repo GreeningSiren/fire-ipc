@@ -1,0 +1,22 @@
+.documents {
+    flex-direction: column;
+    padding-inline: 2%;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline: 5%;
+    }
+}
+
+.document-warpper {
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+}
+
+.technics-wrapper > li {
+    padding-bottom: 4px;
+}

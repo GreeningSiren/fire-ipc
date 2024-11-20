@@ -7,6 +7,7 @@ function TaekwondoForm() {
   const [lastName, setLastName] = useState("");
   const [poomsae, setPoomsae] = useState(false);
   const [sparring, setSparring] = useState(false);
+  const [freestyle, setFreestyle] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,12 +17,14 @@ function TaekwondoForm() {
       lastName,
       poomsae,
       sparring,
+      freestyle
     };
     console.log("Form Data Submitted:", formData);
     // Reset the form after submission
     setFirstName("");
     setLastName("");
     setPoomsae(false);
+    setSparring(false);
     setSparring(false);
   };
 
@@ -65,6 +68,16 @@ function TaekwondoForm() {
             onChange={(e) => setSparring(e.target.checked)}
           />
           <Text word="Sparing"/ >
+        </label>
+      </div>
+      <div>
+        <label className="checkbox-label">
+          <input
+            type="checkbox"
+            checked={freestyle}
+            onChange={(e) => setFreestyle(e.target.checked)}
+          />
+          <Text word="Freestyle"/ >
         </label>
       </div>
       <button className='button-main' type="submit"><Text word="AddParticipantForm"/></button>
