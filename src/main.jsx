@@ -89,7 +89,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
     },
     {
       path: '/competition/:id',
-      element: <CompetitionPage />
+      element: <CompetitionPage session={session} />
     },
     {
       path: '/documents',

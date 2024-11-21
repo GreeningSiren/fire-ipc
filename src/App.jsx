@@ -3,6 +3,7 @@ import './App.css'
 import { Link } from 'react-router-dom'
 import Text from './components/Text';
 import Header from './components/Header';
+import isAdmin from './utils/isAdmin';
 
 const App = ({ session }) => {
   //const [isVideoEnded, setIsVideoEnded] = useState(false);
@@ -29,7 +30,7 @@ const App = ({ session }) => {
         </div>
       </div>
       
-      {session && session.user.id == "cd7e3c17-2a4f-4283-be06-0128f2fd057d" && <Link to='/admin'>Admin Page 🤫</Link>}
+      {session && isAdmin(session) && <Link to='/admin'>Admin Page 🤫</Link>}
     </>
   )
   // return isVideoEnded ?(

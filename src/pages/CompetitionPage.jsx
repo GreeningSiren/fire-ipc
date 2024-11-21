@@ -6,13 +6,17 @@ import './css/CompetitionPage.css';
 import TaekwondoForm from '../components/TaekwondoForm';
 import ParticipantList from '../components/ParticipantList';
 import Header from '../components/Header';
+import isAdmin from '../utils/isAdmin';
+import { useNavigate } from 'react-router-dom';
 
-export default function CompetitionPage() {
+export default function CompetitionPage({ session }) {
+    const navigate = useNavigate()
     const { id } = useParams()
     const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
+        if(!session) navigate('/login/?path=/competition/' + id)
         async function getCompetition() {
             const { data, error } = await supabase
                 .from('competitions')
@@ -29,14 +33,14 @@ export default function CompetitionPage() {
 
         getCompetition()
         setIsLoading(false)
-    }, [id])
+        if(data.date && new Date(data.date) < new Date() && (session && !isAdmin(session))) navigator('/calendar/')
+    }, [id, session, data.date, navigate])
     function convertDateToDDMMYYYY(dateString) {
         if (!dateString) return
         const [year, month, day] = dateString.split('-');
         return `${day}.${month}.${year}`;
     }
-
-    return !isLoading ? (
+    return session && !isLoading ? (
         <div className='main-content main-content-form text-center'>
             <Header t d>{data.title}</Header>
 
@@ -51,9 +55,9 @@ export default function CompetitionPage() {
                 <Text word="AddParticipant" />
             </h2>
 
-            <TaekwondoForm />
+            <TaekwondoForm session={session} id={id} />
 
-            <ParticipantList />
+            <ParticipantList session={session} id={id} />
 
             <Link className='competition-back' to="/calendar"><Text word="Back"/></Link>
         </div>
@@ -65,4 +69,5 @@ export default function CompetitionPage() {
 import PropTypes from 'prop-types'
 CompetitionPage.propTypes = {
     params: PropTypes.object,
+    session: PropTypes.object,
 }

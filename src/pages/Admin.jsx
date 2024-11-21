@@ -4,6 +4,7 @@ import './css/Admin.css'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header';
 import { Helmet } from 'react-helmet';
+import isAdmin from '../utils/isAdmin';
 
 export default function Admin({ session }) {
     const [users, setUsers] = useState(null)
@@ -31,7 +32,7 @@ export default function Admin({ session }) {
     if (!session) {
         window.location.href = '/'
     }
-    if (session && session.user.id != "cd7e3c17-2a4f-4283-be06-0128f2fd057d") {
+    if (session && !isAdmin(session)) {
         window.location.href = '/404'
         console.log(session.user.id)
         console.log("session.user.id != 'cd7e3c17-2a4f-4283-be06-0128f2fd057d'")

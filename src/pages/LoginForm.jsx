@@ -22,7 +22,9 @@ export default function LoginForm({ session }) {
             </div>
         )
     }else {
-        setTimeout(() => {window.location.href = '/'}, 50)
+        const urlParams = new URLSearchParams(window.location.search);
+        const path = urlParams.get('path');
+        setTimeout(() => {window.location.href = path ? `${path}` : '/'}, 50)
     }
 }
 
@@ -30,3 +32,4 @@ import PropTypes from 'prop-types'
 LoginForm.propTypes = {
     session: PropTypes.object,
 }
+
