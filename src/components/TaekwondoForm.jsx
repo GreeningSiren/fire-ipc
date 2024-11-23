@@ -60,9 +60,10 @@ function TaekwondoForm({ session, id }) {
       {error && <p className="error">{error}</p>}
       {success && <p className="success">{success}</p>}
       <div>
-        <label className="label"><Text word='FirstName' /></label>
+        <label className="label" htmlFor="firstName"><Text word='FirstName' /></label>
         <input
           className="input"
+          id="firstName"
           type="text"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
@@ -70,9 +71,10 @@ function TaekwondoForm({ session, id }) {
         />
       </div>
       <div>
-        <label className="label"><Text word='LastName' /></label>
+        <label className="label" htmlFor="lastName"><Text word='LastName' /></label>
         <input
           className="input"
+          id="lastName"
           type="text"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}

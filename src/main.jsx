@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Contacts from './pages/Contacts.jsx'
@@ -124,5 +125,6 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <MainApp />
+    <Analytics />
   </React.StrictMode>
 )
