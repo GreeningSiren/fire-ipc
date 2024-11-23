@@ -28,11 +28,11 @@ export default function CompetitionPage({ session }) {
                 console.log(error)
             } else {
                 setData(data)
+                setIsLoading(false)
             }
         }
 
         getCompetition()
-        setIsLoading(false)
         if(data.date && new Date(data.date) < new Date() && (session && !isAdmin(session))) navigator('/calendar/')
     }, [id, session, data.date, navigate])
     function convertDateToDDMMYYYY(dateString) {
@@ -62,7 +62,7 @@ export default function CompetitionPage({ session }) {
             <Link className='competition-back' to="/calendar"><Text word="Back"/></Link>
         </div>
     ) : (
-        <h1>Loading...</h1>
+        <h1 className='calendar-next main-content'>Loading...</h1>
     )
 }
 
