@@ -58,7 +58,7 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
 
     // If the `type` parameter exists and equals 'recovery', redirect to /resetPassword
     if (type === 'recovery') {
-      setTimeout(() => {window.location.href = '/resetPassword';}, 500)
+      setTimeout(() => { window.location.href = '/resetPassword'; }, 500)
     }
   }, [])
 
@@ -115,7 +115,9 @@ function MainApp() { // eslint-disable-line react-refresh/only-export-components
       <div className='page-content'>
         {session ? <TopBaner session={session.user} /> : <TopBaner />}
         <NavigationBar />
-        <RouterProvider router={router} />
+        <main>
+          <RouterProvider router={router} />
+        </main>
         <Footer />
       </div>
     </div>
